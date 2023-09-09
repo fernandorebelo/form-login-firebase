@@ -2,13 +2,14 @@ import pyrebase
 #import firebase_admin
 #from firebase_admin import credentials, auth
 from flask import Flask, request, render_template, redirect, url_for, session
+from config.settings import *
 
 config = {
-  "apiKey": "AIzaSyDV3GfHih-fXeGkYhCrmSx2YDDepf5Xm3c",
-  "authDomain": "login-form-376e2.firebaseapp.com",
-  "databaseURL": "https://login-form-376e2.firebaseio.com",
-  "storageBucket": "login-form-376e2.appspot.com",
-  "serviceAccount": "firebase-sdk.json"
+  "apiKey": APIKEY,
+  "authDomain": AUTHDOMAIN,
+  "databaseURL": DATABASEURL,
+  "storageBucket": STORAGEBUCKET,
+  "serviceAccount": SERVICEACCOUNT
 }
 
 firebase = pyrebase.initialize_app(config)
